@@ -85,8 +85,21 @@ namespace EZ.TortoiseSVN.Editor
 
                     var settings = CreateInstance<Settings>();
                     AssetDatabase.CreateAsset(settings, Settings.Default.AssetPath);
+                    settings.Validate();
+
                     _settings = settings;
+
+                    SvnLog();
+
+                    flexView.style.display = DisplayStyle.Flex;
+                    noneView.style.display = DisplayStyle.None;
                 });
+                button.text = "Create Settings";
+                noneView.Add(button);
+
+                noneView.style.flexGrow = 1;
+                noneView.style.justifyContent = Justify.Center;
+                noneView.style.alignSelf = Align.Center;
             }
             rootVisualElement.Add(noneView);
 
@@ -106,6 +119,8 @@ namespace EZ.TortoiseSVN.Editor
 
         private string SvnCommand(string path, string commandArgs)
         {
+            UnityEngine.Debug.Log($"SvnCommand({path}, {commandArgs})");
+
             var procStart = new ProcessStartInfo(path, commandArgs);
             procStart.CreateNoWindow = true;
             procStart.RedirectStandardOutput = true;
