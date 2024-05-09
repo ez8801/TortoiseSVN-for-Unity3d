@@ -1,0 +1,15 @@
+.excel2json__text-field > #unity-text-input {
+    -unity-text-align: upper-left;
+}
+
+.excel2json__text-field {
+    flex-grow: 1;
+}
+
+#excel2json__fixed-pane {
+    min-height: 120px;
+}
+
+#excel2json__flexed-pane {
+    min-height: 120px;
+}
