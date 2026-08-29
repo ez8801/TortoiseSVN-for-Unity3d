@@ -31,10 +31,15 @@ namespace EZ.TortoiseSVN.Editor
         public string SvnClientPath;
         public string RepositoryUrl;
 
-        public void OnValidate()
+        public void Validate()
         {
             if (string.IsNullOrEmpty(SvnClientPath))
                 SvnClientPath = DefaultSvnClientPath;
+        }
+
+        private void OnValidate()
+        {
+            Validate();
         }
     }
 }
