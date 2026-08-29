@@ -3,9 +3,13 @@
     "displayName": "TortoiseSVN",
     "version": "1.0.0",
     "unity": "2022.3",
-    "description": "",
+    "description": "Shows SVN commit history inside the Unity Editor by running the TortoiseSVN command line client (svn.exe). Requires TortoiseSVN installed with the command line client tools option. Windows only.",
     "keywords": [
-        "Tool"
+        "Tool",
+        "SVN",
+        "TortoiseSVN",
+        "Version Control",
+        "Editor"
     ],
     "license": "MIT",
     "category": "Tool",
